@@ -220,7 +220,7 @@ super socializer plugin For Social login in WP
 --------------------------------------
 
 //Add dropdown class in dropdown menu in li if has child menu
-
+<?php 
 function menu_set_dropdown( $sorted_menu_items, $args ) {
     $last_top = 0;
     foreach ( $sorted_menu_items as $key => $obj ) {
@@ -236,3 +236,4 @@ function menu_set_dropdown( $sorted_menu_items, $args ) {
 }
 add_filter( 'wp_nav_menu_objects', 'menu_set_dropdown', 10, 2 );
 
+?>
